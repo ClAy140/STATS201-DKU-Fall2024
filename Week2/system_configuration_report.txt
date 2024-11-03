@@ -1,0 +1,36 @@
+### System Configuration Report
+
+**CPU Information:**
+machdep.cpu.cores_per_package: 8
+machdep.cpu.core_count: 8
+machdep.cpu.logical_per_package: 8
+machdep.cpu.thread_count: 8
+machdep.cpu.brand_string: Apple M1
+
+**GPU Information:**
+Chipset Model: Apple M1
+
+**Memory Information:**
+Free: 12.707 MB
+Active: 304.102 MB
+Inactive: 304.102 MB
+Wired: 406.934 MB
+
+**Disk Space:**
+Filesystem                                Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1                           460Gi    19Gi    14Gi    58%    404k  149M    0%   /
+devfs                                    205Ki   205Ki     0Bi   100%     710     0  100%   /dev
+/dev/disk3s6                             460Gi   8.0Gi    14Gi    37%       8  149M    0%   /System/Volumes/VM
+/dev/disk3s2                             460Gi    11Gi    14Gi    45%    1.5k  149M    0%   /System/Volumes/Preboot
+/dev/disk3s4                             460Gi   626Mi    14Gi     5%     295  149M    0%   /System/Volumes/Update
+/dev/disk1s2                             500Mi   6.0Mi   480Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1                             500Mi   6.2Mi   480Mi     2%      29  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3                             500Mi   3.2Mi   480Mi     1%      55  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s5                             460Gi   405Gi    14Gi    97%    4.0M  149M    3%   /System/Volumes/Data
+/dev/disk3s1                             460Gi    19Gi    14Gi    58%    404k  149M    0%   /System/Volumes/Update/mnt1
+map auto_home                              0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+/Applications/Shadowrocket.app/Wrapper   460Gi   384Gi    41Gi    91%    3.9M  432M    1%   /private/var/folders/lb/hxgt11q17hb8gzs1pw1v2jr40000gn/X/BA274810-68C4-51F7-B3FC-0D68F8CDBE6F
+
+**Python Version:**
+Python 3.9.6
+
