@@ -1,79 +1,87 @@
-# Wind Generation Dataset Exploration and Analysis
+# Renewable Energy Datasets for Research and Analysis
 
-Welcome to the wind generation dataset analysis project! This repository contains a series of data exploration, descriptive analysis, and visualization techniques applied to the 2020 wind generation dataset. This project aims to uncover patterns in hourly wind generation across multiple wind plants and analyze their geographical distribution.
+This repository provides access to two comprehensive datasets focused on renewable energy generation, designed to support advanced research in areas such as energy forecasting, grid reliability assessment, and economic modeling. These datasets contain detailed information on wind power generation, operational characteristics, and other renewable energy input variables, offering extensive resources for studies in renewable energy management and technology innovation.
 
-## Overview
-The primary objective of this project is to explore the wind generation dataset, which includes hourly generation data across 1,395 wind plants throughout the year 2020. Each plant’s data is analyzed to understand trends over time, geographical distribution, and correlation across different plants. This project is an introduction to data science methods applied to renewable energy time series data.
+---
 
-### Key Components
-- **Data Preprocessing**: Initial data inspection, basic statistics, and feature engineering to prepare the dataset for analysis.
-- **Data Visualization**: Comprehensive visualizations that include total generation over time, top locations by state, correlation analysis, and more.
-  
-## Running the Code
+## 1. U.S. Wind Power Generation Dataset
 
-The main code for this analysis is stored in the script file **`analysis.py`**. This script can be run in any Python environment where all required libraries (`pandas`, `numpy`, `matplotlib`, `seaborn`) are installed.
+This dataset offers an extensive hourly view of wind power generation across various wind plants in the United States, spanning the years 1980 through 2022. It includes detailed metadata about each plant, including geographic coordinates, turbine specifications, and system capacity.
 
-### Steps to Run
-1. Clone the repository to your local machine and ensure that all dependencies are installed.
-2. Run the script directly with Python to generate and save each plot in the `output_plots` directory:
-   ```bash
-   python3 preprocess.py
-   ```
-3. After running, all plots will be saved as images in the `output_plots` folder for easy access and further analysis.
+- **Applications**:
+  - Renewable energy forecasting
+  - Grid reliability assessment
+  - Economic modeling
+  - Regional wind pattern analysis
+  - Weather impact evaluation on energy production
 
-## Visualizations
+- **Key Features**:
+  - Detailed metadata for wind plants
+  - Geographic and operational attributes
+  - Hourly generation data for individual turbines
+  - Wind turbine power curve details
 
-The following visualizations are generated as part of this project to provide insights into the wind generation data:
+- **Data Access**: Available as open-access on [Zenodo](https://zenodo.org/records/8240163).
 
-### Wind Plant Locations by State
-This scatter plot shows the geographical distribution of wind plants by state based on latitude and longitude coordinates.
+- **Related Publication**: [Scientific Data Article](https://www.nature.com/articles/s41597-024-03894-w#code-availability).
 
-<div align="center">
-  <img src="output_plots/wind_plant_locations.png" alt="Wind Plant Locations by State" width="600"/>
-</div>
+---
 
-### Top 5 States by Number of Wind Plants
-This bar plot illustrates the top 5 states with the highest number of wind plants, showcasing areas with significant wind energy infrastructure.
+## 2. Renewable Energy Generation Input Feature Variables Dataset
 
-<div align="center">
-  <img src="output_plots/top_5_states_wind_plants.png" alt="Top 5 States by Number of Wind Plants" width="600"/>
-</div>
+This dataset supports research into renewable energy input features and their impact on energy generation. It includes variables influencing energy production from wind, solar, and other renewable sources, providing a basis for evaluating and improving energy forecasting models.
 
-### Total Wind Generation Over Time (Hourly)
-This line plot displays the total wind generation across all plants over each hour in 2020, providing a continuous view of wind energy production patterns.
+- **Applications**:
+  - Input feature analysis for renewable energy generation
+  - Renewable energy resource modeling
+  - Sensitivity analysis of environmental factors on generation
 
-<div align="center">
-  <img src="output_plots/total_generation_over_time.png" alt="Total Wind Generation Over Time" width="600"/>
-</div>
+- **Key Features**:
+  - Analysis of input variables for renewable energy generation
+  - Focus on wind, solar, and other energy sources
+  - Rich feature set for renewable energy resource evaluation
 
-### Daily and Monthly Average Generation
-This plot shows both daily and monthly average wind generation across all plants, allowing us to observe seasonal trends in wind energy production.
+- **Data Access**: Available in the [GitHub Repository](https://github.com/Bob05757/Renewable-energy-generation-input-feature-variables-analysis/tree/main).
 
-<div align="center">
-  <img src="output_plots/daily_monthly_avg_generation.png" alt="Daily and Monthly Average Generation" width="600"/>
-</div>
+- **Related Publication**: [Scientific Data Article](https://www.nature.com/articles/s41597-022-01696-6?fromPaywallRec=false#Sec3).
 
-### Correlation Between Plants
-This heatmap visualizes the correlation between wind generation outputs across different plants, revealing plants with similar generation patterns.
+---
 
-<div align="center">
-  <img src="output_plots/correlation_between_plants.png" alt="Correlation Between Plants" width="600"/>
-</div>
+## Data Dictionary
 
-### Average Generation by Hour of Day (Diurnal Pattern)
-This line plot illustrates the average wind generation by hour across all plants, highlighting any daily generation patterns, such as peak generation hours.
+The following table provides a detailed description of the variables included in the **U.S. Wind Power Generation Dataset**:
 
-<div align="center">
-  <img src="output_plots/hourly_avg_generation_pattern.png" alt="Average Generation by Hour of Day" width="600"/>
-</div>
+| Variable Name                     | Definition                                                  | Unit       | Example Values                              |
+|-----------------------------------|-------------------------------------------------------------|------------|--------------------------------------------|
+| `plant_code`                      | Unique identifier for each wind plant                       | ID         | 508, 692, 944                              |
+| `plant_code_unique`               | Unique identifier for individual turbines in a plant        | ID         | 508_1, 692_1                               |
+| `generator_id`                    | Identifier for specific generators                          | ID         | T1, T2, T3                                |
+| `lat`                             | Latitude of the plant                                       | Degrees    | 38.033327                                  |
+| `lon`                             | Longitude of the plant                                      | Degrees    | -102.537915                                |
+| `ba`                              | Balancing Authority controlling the plant                   | Abbrev.    | PSCO, WAUW                                 |
+| `nerc_region`                     | NERC region where the plant is located                      | Abbrev.    | WECC, MRO                                 |
+| `state`                           | State where the plant is located                            | Abbrev.    | CO, WY, IL                                |
+| `system_capacity`                 | Maximum power output capacity                               | MW         | 1500.0                                     |
+| `wind_farm_xCoordinates`          | X-coordinates of wind turbines within the farm              | Meters     | [0, 660.0, 330.0]                         |
+| `wind_farm_yCoordinates`          | Y-coordinates of wind turbines within the farm              | Meters     | [0, 376.0, 752.0]                         |
+| `wind_turbine_hub_ht`             | Hub height of the turbine                                   | Meters     | 79.98                                      |
+| `wind_turbine_powercurve_powerout`| Power output for each wind speed in the power curve         | kW         | [0.0, 0.0, 0.0]                           |
+| `wind_turbine_powercurve_windspeeds`| Wind speeds corresponding to the power curve               | m/s        | [0.0, 0.25, 0.5]                          |
+| `wind_turbine_rotor_diameter`     | Diameter of the turbine's rotor                             | Meters     | 82.5                                       |
+| `wind_resource_shear`             | Shear factor describing wind speed variation with height    | N/A        | 0.14                                       |
+| `wind_resource_turbulence_coeff`  | Turbulence coefficient of the wind resource                 | N/A        | 0.1                                        |
+| `wind_resource_model_choice`      | Wind resource model used for simulations                    | Categorical| 0, 1, 2                                   |
+| `wind_farm_wake_model`            | Model used to simulate wake effects within the wind farm    | Categorical| 0, 1                                      |
+| `turb_generic_loss`               | Generic loss coefficient for the turbine                    | Percent    | 15                                         |
+| `adjust:constant`                 | Adjustment constant applied to the generation data          | N/A        | 0                                          |
 
-## Dataset
-The wind generation dataset provides hourly wind generation measurements for 1,395 wind plants across the year 2020. Each plant's data is represented as a separate column, with rows representing each hour of the year. This dataset enables analysis of generation patterns, both temporal (hourly, daily, monthly) and spatial (across states).
+For the **Renewable Energy Generation Input Feature Variables Dataset**, refer to the [GitHub Repository](https://github.com/Bob05757/Renewable-energy-generation-input-feature-variables-analysis/tree/main) for variable descriptions.
 
-| **Variable**       | **Description**                                                        |
-|--------------------|------------------------------------------------------------------------|
-| Date/Time          | Hourly timestamp for each measurement                                  |
-| Plant1, Plant2, ..., Plant1395 | Hourly wind generation (MW) for each plant                 |
+---
 
-For more detailed information, please refer to the dataset documentation.
+## How to Use These Datasets
+
+1. Access the data through the provided links to Zenodo and GitHub.
+2. Use the datasets for studies on renewable energy forecasting, technology assessment, and grid management.
+3. Consult the referenced publications for insights into dataset structure and methodologies.
 
