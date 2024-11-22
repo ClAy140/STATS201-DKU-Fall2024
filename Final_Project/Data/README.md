@@ -28,22 +28,28 @@ The project tackles the challenge of forecasting wind power generation with high
 ## **3. Datasets**
 
 ### **China Dataset**
-- **Source:** Simulated plant-level wind power data.
-- **Features:**
-  - Wind speed (m/s)
-  - Wind direction (°)
-  - Air temperature (°C)
-  - Atmospheric pressure (hPa)
-  - Relative humidity (%)
-  - Power output (MW)
+- **Source:** The dataset is derived from the study *“A comprehensive database for renewable energy generation and input feature variables”* published in _Scientific Data_ by Nature (https://www.nature.com/articles/s41597-022-01696-6?fromPaywallRec=false#Sec3).  
+- **GitHub Repository:** [Renewable Energy Input Variables Analysis](https://github.com/Bob05757/Renewable-energy-generation-input-feature-variables-analysis).  
+- **Features:**  
+  - Wind speed (m/s)  
+  - Wind direction (°)  
+  - Air temperature (°C)  
+  - Atmospheric pressure (hPa)  
+  - Relative humidity (%)  
+  - Power output (MW)  
 
 ### **U.S. Dataset**
-- **Source:** Aggregated hourly wind power generation data across regions.
-- **Features:**
-  - Capacity factor proxies
-  - Hourly power output
+- **Source:** Aggregated hourly wind power generation data across regions.  
+- **Data Access:** Available as open-access on [Zenodo](https://zenodo.org/records/8240163).  
+- **Related Publication:** [Scientific Data Article](https://www.nature.com/articles/s41597-024-03894-w#code-availability).  
+- **Features:**  
+  - Capacity factor proxies  
+  - Hourly power output  
 
-**File Access:** Filtered datasets for January 2020 (`china_jan_2020.pkl` and `us_jan_2020.pkl`) are included in the repository. Raw datasets can be accessed externally if required.
+**File Access:**  
+- Preprocessed datasets for January 2020 (`china_jan_2020.csv` and `us_jan_2020.csv`) are included in the repository.  
+- Raw datasets are accessible through the original sources linked above.  
+
 
 ---
 
@@ -53,8 +59,8 @@ The project tackles the challenge of forecasting wind power generation with high
 |------------------------|---------------------------------------------------------------------------------|
 | `pre.py`              | Scripts for data preprocessing, normalization, and feature scaling.             |
 | `main.py`             | Model training, transfer learning, and evaluation scripts.                      |
-| `china_jan_2020.pkl`  | Preprocessed China dataset for January 2020.                                    |
-| `us_jan_2020.pkl`     | Preprocessed U.S. dataset for January 2020.                                     |
+| `china_jan_2020.csv`  | Preprocessed China dataset for January 2020.                                    |
+| `us_jan_2020.csv`     | Preprocessed U.S. dataset for January 2020.                                     |
 | `README.md`           | Project documentation.                                                          |
 
 ---
@@ -86,7 +92,7 @@ The project tackles the challenge of forecasting wind power generation with high
    ```bash
    python pre.py
    ```
-   - Filters and normalizes data from raw CSV files to produce `.pkl` files.
+   - Filters and normalizes data from raw CSV files to produce `.csv` files.
 
 2. **Train Models:**
    ```bash
@@ -94,9 +100,6 @@ The project tackles the challenge of forecasting wind power generation with high
    ```
    - Trains the China model and fine-tunes the U.S. model with transferred weights.
 
-3. **Visualize Results:**
-   - Outputs prediction plots and evaluation metrics in the console.
-   - Example visualization: attention heatmaps for feature analysis.
 
 ---
 
