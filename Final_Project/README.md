@@ -133,7 +133,9 @@ The forecasting model was evaluated using:
 <p align="center">
     <img src="Poster1.png"  width="600"/>
 </p>
+
 *Figure 1: Poster of the Research Project. Created with PowerPoint*
+
 ---
 
 ## Conclusion  
