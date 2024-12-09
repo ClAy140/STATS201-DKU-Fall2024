@@ -1,6 +1,4 @@
-Certainly! Here’s the polished `README.md` file in a code block for easy copying:
 
-```markdown
 # Improving Wind Power Forecasting with LSTM-Based Transfer Learning across Feature-Rich and Feature-Poor Datasets
 
 ## Authors  
