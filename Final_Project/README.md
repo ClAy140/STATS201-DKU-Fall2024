@@ -126,8 +126,9 @@ The forecasting model was evaluated using:
 ## Embedded Media  
 
 ### Demo Video  
-[![Demo Video](https://img.youtube.com/vi/DEMO_VIDEO_LINK/0.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_LINK)  
+[![Demo Video](https://img.youtube.com/vi/GLz4Z-O9Hsk/0.jpg)](https://youtu.be/GLz4Z-O9Hsk)
 
+Click on the thumbnail above to watch the project demo video.
 ### Research Poster  
 <p align="center">
     <img src="Poster1.png"  width="600"/>

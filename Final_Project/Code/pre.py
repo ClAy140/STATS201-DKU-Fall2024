@@ -44,7 +44,7 @@ def filter_data(china_data, us_data):
 # Preprocess Data
 def preprocess_china_data(china_data):
     """Normalize China dataset."""
-    china_data= china_data.resample('1H').mean()
+    # china_data= china_data.resample('1H').mean()
     scaler = MinMaxScaler()
     china_features = [
         'Wind speed at height of 10 meters (m/s)',
