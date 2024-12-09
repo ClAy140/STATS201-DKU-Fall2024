@@ -1,104 +1,86 @@
 # Wind Power Forecasting Using Transfer Learning
 
-This repository contains the codebase and datasets for the research project _Wind Power Forecasting Using Transfer Learning_. The project explores the application of Long Short-Term Memory (LSTM) models, pre-trained on feature-rich datasets from China, to predict wind power generation in the United States using transfer learning. By leveraging transfer learning, the study aims to improve model accuracy and generalization across regions with diverse meteorological conditions.
+This repository contains the codebase and datasets for the research project _Wind Power Forecasting Using Transfer Learning_. The project utilizes Long Short-Term Memory (LSTM) models, initially trained on comprehensive datasets from China, to predict wind power generation in the United States using transfer learning techniques. The goal is to leverage historical data to enhance prediction accuracy and model generalization across different meteorological conditions.
 
 ---
 
-## **1. Overview**
+## 1. Overview
 
-The project tackles the challenge of forecasting wind power generation with high accuracy across different regions. It combines meteorological data with machine learning techniques to address key research questions, including the impact of transfer learning on cross-regional model generalization. The repository includes:
-
-- Data preprocessing and normalization scripts.
-- LSTM model architecture with transfer learning capabilities.
-- Scripts for training, fine-tuning, and evaluating models.
-- Visualization tools for predictions and model interpretability.
+This project addresses the challenge of accurately forecasting wind power generation across different regions using advanced machine learning techniques. The repository includes scripts for data preprocessing, model training, and evaluation, as well as tools for visualization and interpretation of the models.
 
 ---
 
-## **2. Key Features**
+## 2. Key Features
 
-- **Cross-Regional Forecasting:** Utilizes transfer learning to adapt models trained on Chinese data for U.S. regions.
-- **LSTM-Based Architecture:** Implements sequential models to capture temporal dependencies in meteorological data.
-- **Data Normalization:** Ensures feature compatibility across datasets from different regions.
-- **Model Evaluation:** Includes RMSE, MAE, and R² metrics to assess prediction accuracy.
-- **Interpretability Tools:** Generates attention heatmaps to visualize model focus on key features.
-
----
-
-## **3. Datasets**
-
-### **China Dataset**
-- **Source:** The dataset is derived from the study *“A comprehensive database for renewable energy generation and input feature variables”* published in _Scientific Data_ by Nature (https://www.nature.com/articles/s41597-022-01696-6?fromPaywallRec=false#Sec3).  
-- **GitHub Repository:** [Renewable Energy Input Variables Analysis](https://github.com/Bob05757/Renewable-energy-generation-input-feature-variables-analysis).  
-- **Features:**  
-  - Wind speed (m/s)  
-  - Wind direction (°)  
-  - Air temperature (°C)  
-  - Atmospheric pressure (hPa)  
-  - Relative humidity (%)  
-  - Power output (MW)  
-
-### **U.S. Dataset**
-- **Source:** Aggregated hourly wind power generation data across regions.  
-- **Data Access:** Available as open-access on [Zenodo](https://zenodo.org/records/8240163).  
-- **Related Publication:** [Scientific Data Article](https://www.nature.com/articles/s41597-024-03894-w#code-availability).  
-- **Features:**  
-  - Capacity factor proxies  
-  - Hourly power output  
-
-**File Access:**  
-- Preprocessed datasets for January 2020 (`china_jan_2020.csv` and `us_jan_2020.csv`) are included in the repository.  
-- Raw datasets are accessible through the original sources linked above.  
-
+- **Cross-Regional Forecasting:** Applies transfer learning to adapt models from Chinese to U.S. data.
+- **LSTM-Based Model:** Captures temporal patterns in meteorological data for accurate forecasting.
+- **Data Normalization:** Standardizes features to ensure consistency across datasets.
+- **Model Evaluation:** Utilizes RMSE, MAE, and R² metrics for comprehensive performance assessment.
+- **Visualization Tools:** Provides attention heatmaps and performance plots to understand model behavior.
 
 ---
 
-## **4. Codebase Structure**
+## 3. Datasets
 
-| **File/Folder**       | **Description**                                                                 |
-|------------------------|---------------------------------------------------------------------------------|
-| `pre.py`              | Scripts for data preprocessing, normalization, and feature scaling.             |
-| `main.py`             | Model training, transfer learning, and evaluation scripts.                      |
-| `china_jan_2020.csv`  | Preprocessed China dataset for January 2020.                                    |
-| `us_jan_2020.csv`     | Preprocessed U.S. dataset for January 2020.                                     |
-| `README.md`           | Project documentation.                                                          |
+### China Dataset
+- **Source:** Derived from "A comprehensive database for renewable energy generation and input feature variables", _Scientific Data_.
+- **Access:** [Renewable Energy Input Variables Analysis](https://github.com/Bob05757/Renewable-energy-generation-input-feature-variables-analysis)
+- **Features:** Wind speed, wind direction, air temperature, atmospheric pressure, relative humidity, power output.
+
+### U.S. Dataset
+- **Source:** Aggregated hourly wind power data from various U.S. regions.
+- **Access:** [Zenodo Repository](https://zenodo.org/records/8240163)
+- **Features:** Capacity factor, hourly power output.
+
+**Data Dictionary:**
+| Feature              | Description                      | Data Type |
+|----------------------|----------------------------------|-----------|
+| Wind Speed (m/s)     | Speed of wind at measured height | float     |
+| Wind Direction (°)   | Direction from which wind blows  | float     |
+| Air Temperature (°C) | Ambient temperature              | float     |
+| Atmospheric Pressure (hPa) | Atmospheric pressure at site | float   |
+| Relative Humidity (%)| Amount of moisture in the air    | float     |
+| Power Output (MW)    | Power generated by wind farm     | float     |
 
 ---
 
-## **5. Methodology**
+## 4. Codebase Structure
+
+| File/Folder           | Description                                       |
+|-----------------------|---------------------------------------------------|
+| `pre.py`              | Data preprocessing and normalization.             |
+| `main.py`             | Model training and evaluation.                    |
+| `data/china_jan_2020.csv` | Dataset for model training.                   |
+| `data/us_jan_2020.csv` | Dataset for model application.                    |
+| `README.md`           | Documentation of the repository.                  |
+
+---
+
+## 5. Methodology
 
 1. **Preprocessing:**
-   - China and U.S. datasets are normalized and aligned using MinMaxScaler.
-   - Data is split into training (70%) and testing (30%) sets with sliding window input-output pairs.
+   - Normalize and align datasets using MinMaxScaler.
+   - Split data for training and testing with a 70:30 ratio.
 
 2. **Model Training:**
-   - **China Model:** LSTM trained on the Chinese dataset.
-   - **Transfer Learning:** Pre-trained weights from the China model are fine-tuned on the U.S. dataset.
+   - Train LSTM model on the China dataset.
+   - Apply transfer learning to adapt the model to U.S. dataset.
 
 3. **Evaluation Metrics:**
-   - **Root Mean Squared Error (RMSE):** Measures overall prediction accuracy.
-   - **Mean Absolute Error (MAE):** Assesses magnitude of prediction errors.
-   - **R² Score:** Evaluates model fit against actual data.
+   - **RMSE:** Measures prediction accuracy.
+   - **MAE:** Quantifies prediction errors.
+   - **R² Score:** Assesses the fit of the model to the data.
 
 4. **Visualization:**
-   - Generate attention heatmaps to interpret feature importance during predictions.
-   - Plot actual vs. predicted wind power for both regions.
+   - Generate heatmaps and compare actual vs. predicted outputs.
 
 ---
 
-## **6. How to Run the Code**
+## 6. How to Run the Code
 
-1. **Preprocess the Data:**
-   ```bash
-   python pre.py
-   ```
-   - Filters and normalizes data from raw CSV files to produce `.csv` files.
-
-2. **Train Models:**
-   ```bash
-   python main.py
-   ```
-   - Trains the China model and fine-tunes the U.S. model with transferred weights.
+```bash
+python pre.py  # Preprocess data
+python main.py # Train and evaluate models
 
 
 ---

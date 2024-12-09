@@ -1,5 +1,5 @@
 import os
-import ipdb
+# import ipdb
 # ipdb.set_trace()
 import numpy as np
 import pandas as pd
@@ -122,10 +122,12 @@ def visualize(plant_data, processed_data):
 
 if __name__ == '__main__':
     # Process the data
-    processed_data = pre(data)
+    # processed_data = pre(data)
 
-    # Load the plant configuration data for location visualizations
-    plant_data = pd.read_csv("eia_wind_configs.csv")
+    # # Load the plant configuration data for location visualizations
+    # plant_data = pd.read_csv("eia_wind_configs.csv")
 
-    # Visualize the data and save plots
-    visualize(plant_data, processed_data)
+    # # Visualize the data and save plots
+    # visualize(plant_data, processed_data)
+    data = pd.read_csv("Wind_capacity_99MW.csv")
+    print(data.info())
