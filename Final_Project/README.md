@@ -2,9 +2,8 @@
 # Improving Wind Power Forecasting with LSTM-Based Transfer Learning across Feature-Rich and Feature-Poor Datasets
 
 ## Authors  
-- **[Your Name]**: Project Lead, Model Development  
-- **[Team Member 1]**: Data Processing and Visualization  
-- **[Team Member 2]**: Documentation and Evaluation  
+- **[Peng Wang]**: Project Lead, Model Development  
+
 
 ## Disclaimer  
 This project was submitted for **STATS201: Machine Learning for Social Science**, instructed by **Prof. Luyao Zhang** at **Duke Kunshan University** in **Autumn 2024**.
@@ -90,8 +89,6 @@ Alternatively, manually install:
 - `seaborn`  
 - `scikit-learn`  
 - `tensorflow`  
-- `keras`  
-- `jupyter`  
 
 ---
 
@@ -133,8 +130,11 @@ The forecasting model was evaluated using:
 [![Demo Video](https://img.youtube.com/vi/DEMO_VIDEO_LINK/0.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_LINK)  
 
 ### Research Poster  
-[View Poster](Poster.pdf)
+<p align="center">
+    <img src="Poster1.png"  width="600"/>
+</p>
 
+*Figure 1: Poster of the Research Project. Created with PowerPoint*
 ---
 
 ## Conclusion  
