@@ -67,11 +67,10 @@ The main scripts and relevant files are organized under the `Code/` directory:
 - **Additional Files**: Wind plant capacity data, wind generation factors.  
 
 ### Supporting Documents  
-- **`Explanation.ipynb`**: Step-by-step walkthrough in Jupyter Notebook.  
 - **`Poster.pdf`**: Research findings and methodology.  
 - **`installed_packages.txt`**: Dependency list.  
 - **`system_configuration_report.txt`**: System and environment details.  
-
+- **`docs/STATS201_Final_Report.pdf`**: The final report summarizing the project’s findings and methodologies.
 ---
 
 ## Requirements  
@@ -171,5 +170,6 @@ This project solidified our understanding of machine learning frameworks and the
 ## License  
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
-```
+
+
 
