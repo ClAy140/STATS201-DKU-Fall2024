@@ -1,4 +1,4 @@
-# Wind Power Forecasting Using Transfer Learning
+# Improving Wind Power Forecasting with LSTM-Based Transfer Learning across Feature-Rich and Feature-Poor Datasets
 
 ## Overview
 This project explores the application of **Transfer Learning** to improve wind power forecasting across different regions with varying data characteristics. Traditional wind power forecasting models trained on specific geographic locations often struggle to generalize to other regions due to **climatic variability**, differing **data resolutions**, and the **availability of meteorological features**. This study applies transfer learning to address these issues by training a model on a data-rich region (**China**) and applying it to a data-scarce region (**U.S.**), significantly enhancing forecasting accuracy.

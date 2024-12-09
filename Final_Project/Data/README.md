@@ -1,4 +1,4 @@
-# Wind Power Forecasting Using Transfer Learning
+# Improving Wind Power Forecasting with LSTM-Based Transfer Learning across Feature-Rich and Feature-Poor Datasets
 
 This repository contains the codebase and datasets for the research project _Wind Power Forecasting Using Transfer Learning_. The project utilizes Long Short-Term Memory (LSTM) models, initially trained on comprehensive datasets from China, to predict wind power generation in the United States using transfer learning techniques. The goal is to leverage historical data to enhance prediction accuracy and model generalization across different meteorological conditions.
 
