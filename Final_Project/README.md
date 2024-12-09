@@ -133,7 +133,7 @@ The forecasting model was evaluated using:
 [![Demo Video](https://img.youtube.com/vi/DEMO_VIDEO_LINK/0.jpg)](https://www.youtube.com/watch?v=DEMO_VIDEO_LINK)  
 
 ### Research Poster  
-![Poster](Poster.pdf)  
+[View Poster](Poster.pdf)
 
 ---
 
