@@ -83,5 +83,5 @@ Analyze the model’s performance with prediction plots and attention heatmaps:
 
 ## **6. Contributors**
 
-- **[Peng Wang]:** Lead researcher and developer.
+- **Peng Wang:** Lead researcher and developer.
 

@@ -2,7 +2,7 @@
 # Improving Wind Power Forecasting with LSTM-Based Transfer Learning across Feature-Rich and Feature-Poor Datasets
 
 ## Authors  
-- **[Peng Wang]**: Project Lead, Model Development  
+- **Peng Wang**: Project Lead, Model Development  
 
 
 ## Disclaimer  
